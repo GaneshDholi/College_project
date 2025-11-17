@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip Explorer - GoTravels</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/trip-details.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="trip-page">
+    <div class="left-panel">
+      <img id="hero-photo" class="hero-img" src="./fallback.jpg" alt="City View" />
+
+      <div class="city-header">
+        <h1 id="city-title">Loading...</h1>
+        <div class="city-tags" id="city-tags"></div>
+      </div>
+
+      <div class="author-block">
+        <img id="author-img" src="https://i.pravatar.cc/80" alt="Author" />
+        <div>
+          <h4 id="author-name">Traveler</h4>
+          <p id="author-meta">Exploring the unknown</p>
+        </div>
+        <button class="follow-btn">Follow</button>
+      </div>
+
+      <h2 class="section-heading">General Tips</h2>
+      <p id="city-tips" class="city-tips">Loading...</p>
+
+      <h2 class="section-heading">Top Attractions</h2>
+      <div id="places-list"></div>
+    </div>
+
+    <div id="map" class="right-panel"></div>
+  </div>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+  <script src="./trip-details.js"></script>
+</body>
+</html>

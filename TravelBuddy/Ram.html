@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GoTravels Dashboard</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: "Poppins", sans-serif;
+                background: #f5f7fa;
+                display: flex;
+                color: #333;
+            }
+
+            /* Sidebar */
+            .sidebar {
+                width: 220px;
+                background: #ffffff;
+                border-right: 1px solid #e3e3e3;
+                padding: 30px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo {
+                font-size: 22px;
+                font-weight: 600;
+                color: #3ab47d;
+                margin-bottom: 40px;
+            }
+
+            .logo span {
+                color: #333;
+            }
+
+            .menu {
+                width: 100%;
+            }
+
+            .menu button {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                background: none;
+                border: none;
+                padding: 12px 10px;
+                text-align: left;
+                font-size: 15px;
+                cursor: pointer;
+                border-radius: 8px;
+                transition: background 0.2s;
+            }
+
+            .menu button:hover,
+            .menu button.active {
+                background: #e8f6ef;
+                color: #3ab47d;
+            }
+
+            .profile {
+                margin-top: auto;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                background: #f7f9fb;
+                border-radius: 10px;
+                width: 100%;
+            }
+
+            .profile img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+
+            .profile div {
+                font-size: 13px;
+            }
+
+            .profile div strong {
+                display: block;
+            }
+
+            /* Main content */
+            .main {
+                flex: 1;
+                padding: 30px;
+            }
+
+            .section {
+                background: white;
+                border-radius: 16px;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+                margin-bottom: 30px;
+            }
+
+            .section h2 {
+                margin-top: 0;
+                font-size: 18px;
+                margin-bottom: 15px;
+                color: #333;
+            }
+
+            .card-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 18px;
+            }
+
+            .card {
+                background: #fff;
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+                transition: all 0.3s ease;
+                cursor: pointer;
+                position: relative;
+            }
+
+            .card:hover {
+                transform: translateY(-5px) scale(1.03);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            }
+
+            .card img {
+                width: 100%;
+                height: 130px;
+                object-fit: cover;
+            }
+
+            .card-content {
+                padding: 10px 12px;
+            }
+
+            .card-content h4 {
+                margin: 0;
+                font-size: 14px;
+                color: #222;
+            }
+
+            .card-content p {
+                font-size: 12px;
+                color: #777;
+                margin-top: 5px;
+            }
+
+            .icons {
+                font-size: 12px;
+                color: #777;
+                margin-top: 8px;
+                display: flex;
+                gap: 12px;
+                align-items: center;
+            }
+
+            .icons span {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">Go<span>Travels</span></div>
+
+            <div class="menu">
+                <button class="active">🏠 Dashboard</button>
+                <button>💬 Chat with AI</button>
+                <button>📍 Live Trip</button>
+                <button>💡 Trip Ideas</button>
+            </div>
+
+            <div class="profile">
+                <img src="https://i.pravatar.cc/100" alt="profile" />
+                <div>
+                    <strong>Ganesh Dholi</strong>
+                    <span>@ganesh_221</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="main">
+
+            <div class="section">
+                <h2>Recently viewed and upcoming</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1712510817140-917938f92e5b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
+                            alt="">
+                        <div class="card-content">
+                            <h4>Trip to Rishikesh</h4>
+                            <p>Oct 1-3 · 21 places</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1614082242765-7c98ca0f3df3?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
+                            alt="">
+                        <div class="card-content">
+                            <h4>Trip to Goa</h4>
+                            <p>Nov 5-7 · 15 places</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1718383537411-6f9e727ae0bb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387"
+                            alt="">
+                        <div class="card-content">
+                            <h4>Rishikesh Guide</h4>
+                            <div class="icons">
+                                <span>❤️ 12</span>
+                                <span>💬 14</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Explore popular destinations</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=60"
+                            alt="">
+                        <div class="card-content">
+                            <h4>New Delhi</h4>
+                            <p>India Gate & Heritage</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=800&q=60"
+                            alt="">
+                        <div class="card-content">
+                            <h4>Salem, Massachusetts</h4>
+                            <p>Historic city vibes</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774"
+                            alt="">
+                        <div class="card-content">
+                            <h4>Goa Beaches</h4>
+                            <p>Chill & adventure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            // Optional: highlight active sidebar button
+            const buttons = document.querySelectorAll('.menu button');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

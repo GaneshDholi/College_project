@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
+.trip-page {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left content panel */
+.left-panel {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-img {
+  width: 100%;
+  height: 280px;
+  border-radius: 14px;
+  object-fit: cover;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.city-header {
+  margin-top: 16px;
+}
+
+.city-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+}
+
+.city-tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.city-tags span {
+  background: #f0f0f0;
+  padding: 5px 12px;
+  border-radius: 30px;
+  font-size: 13px;
+  color: #555;
+}
+
+.author-block {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  gap: 10px;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.author-block img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.follow-btn {
+  margin-left: auto;
+  background: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.section-heading {
+  margin-top: 22px;
+  font-size: 20px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 4px;
+}
+
+.city-tips {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.place-card {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #eee;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.place-card:hover {
+  background: #f3f3f3;
+  transform: translateY(-2px);
+}
+
+.place-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.place-card h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.place-card p {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: #777;
+}
+
+/* Map */
+.right-panel {
+  flex: 1.2;
+  height: 100%;
+}

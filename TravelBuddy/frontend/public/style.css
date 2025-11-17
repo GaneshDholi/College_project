@@ -1,0 +1,541 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #6bae75;
+  --background-color: #fdfdfd;
+  --text-color: #333;
+  --text-color-secondary: #747171;
+  --text-color-light: #999999;
+  --input-border-color: #ccc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background: var(--background-color);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* Left Image Section */
+.image-section {
+  flex: 1.35;
+  position: relative;
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animated vertical progress bar */
+.progress {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  z-index: 10;
+}
+
+.dot {
+  width: 9px;
+  height: 16px;
+  background: #ffffff70;
+  border-radius: 19px;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  height: 60px;
+  width: 8px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* Right Form Section */
+.form-section {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  position: relative;
+  padding: 40px;
+}
+
+.form-page {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  max-width: 370px;
+}
+
+.form-page.active {
+  display: flex;
+}
+
+.logo {
+  color: var(--primary-color);
+  margin-left: -10px;
+  margin-bottom: 10px;
+}
+
+.logo-google {
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  margin-left: -10px;
+}
+
+.logo span {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* h3 {
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+} */
+
+.logIn_heading,
+.form_heading,
+.form_heading_signup {
+  font-family: "Manrope", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: left;
+  color: var(--text-color-secondary);
+  margin-bottom: 20px;
+}
+
+.logIn_heading {
+  margin-bottom: 48px;
+}
+
+.logIn_subHeading,
+.form-group label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--text-color-light);
+}
+
+.logIn_subHeading {
+  margin-bottom: 20px;
+}
+
+.logIn_subHeading input,
+.form-group input {
+  width: 314px;
+  color: var(--text-color-secondary);
+  outline: none;
+}
+
+.logIn_subHeading input:focus,
+.form-group input:focus {
+  outline: none;
+}
+
+.logIn_subHeading p {
+  margin-bottom: 8px;
+}
+
+.google-btn,
+.next-btn,
+.restart-btn,
+.login-button,
+.signup-button {
+  background: linear-gradient(90deg, #4e9459 0%, #6bae75 100%);
+  border: 1px solid #e1e1e1;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.login-button,
+.signup-button {
+  padding: 10px;
+  width: 80%;
+  margin: 2%;
+  margin-top: 8%;
+}
+
+.login-button svg {
+  margin-top: 3px;
+  margin-left: -4px;
+}
+
+.google-btn,
+.login-button,
+.signup-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.google-btn:hover,
+.login-button:hover,
+.signup-button:hover {
+  background: linear-gradient(90deg, #42804c 0%, #62a06b 100%);
+}
+
+.google-btn:active,
+.next-btn:hover,
+.restart-btn:hover,
+.login-button:active,
+.signup-button:active {
+  transform: scale(0.9);
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+.link,
+.account-link {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  color: #999999;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.link {
+  margin-top: 30px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+} 
+
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: white;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background: white;
+  border-right: 1px solid #e9ecef;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  padding: 0 24px 32px;
+}
+
+.logo h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.logo-accent {
+  color: #10b981;
+}
+
+.nav-menu {
+  flex: 1;
+  padding: 0 16px;
+}
+
+.nav-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  margin-bottom: 4px;
+  border: none;
+  background: none;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.nav-item.active {
+  background-color: #10b981;
+  color: white;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.user-profile {
+  padding: 24px;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #374151;
+}
+
+.profile-handle {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+
+#recaptcha-container {
+  margin-top: 10px;
+  text-align: center;
+}
+
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 32px;
+  overflow-y: auto;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 24px;
+}
+
+.recent-section {
+  margin-bottom: 48px;
+}
+
+.trip-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.trip-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.trip-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.trip-image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.trip-info {
+  padding: 16px;
+}
+
+.trip-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.trip-details {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.detail-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.trip-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.stat-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Destination Cards */
+.destination-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.destination-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.destination-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.destination-card.featured {
+  position: relative;
+}
+
+.destination-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  padding: 24px 16px 16px;
+}
+
+.destination-title {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    padding: 16px;
+    border-right: none;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .logo {
+    padding: 0;
+    margin-right: 24px;
+  }
+  
+  .nav-menu {
+    flex-direction: row;
+    padding: 0;
+    gap: 8px;
+  }
+  
+  .nav-item {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+  
+  .user-profile {
+    padding: 0;
+    border-top: none;
+    margin-left: auto;
+  }
+  
+  .main-content {
+    padding: 24px 16px;
+  }
+  
+  .trip-cards,
+  .destination-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    flex-wrap: wrap;
+  }
+  
+  .nav-menu {
+    width: 100%;
+    order: 1;
+    margin-top: 16px;
+  }
+  
+  .user-profile {
+    margin-left: 0;
+  }
+}
